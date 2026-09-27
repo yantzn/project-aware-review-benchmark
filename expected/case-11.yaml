@@ -1,0 +1,11 @@
+case_id: case-11
+expected_findings: []
+human_checks:
+  - id: HUMAN-001
+    any_terms:
+      - ["/v2/users"]
+      - ["/users"]
+      - [設計, design]
+must_not_report: []
+notes:
+  - 要件には設計書更新が別タスクと明記されている。実装を即座に設計違反と断定しない。
