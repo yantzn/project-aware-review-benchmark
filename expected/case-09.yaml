@@ -1,0 +1,10 @@
+case_id: case-09
+expected_findings:
+  - id: SEC-001
+    category: security
+    file: src/auth.py
+    any_terms:
+      - [access_token, token, トークン]
+    project_rule_reference_terms: [PRJ-LOG-001]
+human_checks: []
+must_not_report: []
