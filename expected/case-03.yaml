@@ -1,0 +1,9 @@
+case_id: case-03
+expected_findings:
+  - id: COR-001
+    category: correctness
+    file: src/user_service.py
+    any_terms:
+      - ["18", MIN_AGE, 境界]
+human_checks: []
+must_not_report: []
