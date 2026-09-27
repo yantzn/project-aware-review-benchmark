@@ -16,7 +16,7 @@ class UserService:
 
     def register_user(self, *, email: str, name: str, age: int) -> User:
         normalized_email = email.strip().lower()
-        normalized_name = name.strip()
+        normalized_name = email.strip()
 
         if not normalized_email:
             raise ValidationError("email is required")
