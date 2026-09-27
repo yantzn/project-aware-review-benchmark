@@ -1,0 +1,11 @@
+case_id: case-06
+expected_findings:
+  - id: DES-001
+    category: design_conformance
+    any_terms:
+      - [age, 年齢]
+      - [string, 文字列]
+      - [integer, 整数]
+    design_reference_terms: [DB定義, age]
+human_checks: []
+must_not_report: []
