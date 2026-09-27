@@ -75,7 +75,7 @@ python tools/parse_excel.py design/system-design.xlsx > design-context.json
 python benchmark/evaluate.py --case case-05 --result result.json
 ```
 
-評価スクリプトは `benchmark-gold` ブランチの期待結果を `git show` で読み込みます。
+評価スクリプトは既定で `origin/benchmark-gold` の期待結果を `git show` で読み込みます。ローカルブランチを使う場合は `--gold-ref benchmark-gold` を指定します。
 
 ## セットアップ
 
