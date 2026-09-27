@@ -1,0 +1,11 @@
+case_id: case-05
+expected_findings:
+  - id: DES-001
+    category: design_conformance
+    file: src/api.py
+    any_terms:
+      - ["/members"]
+      - ["/users"]
+    design_reference_terms: [API-001]
+human_checks: []
+must_not_report: []
