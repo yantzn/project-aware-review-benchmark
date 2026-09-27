@@ -1,0 +1,10 @@
+case_id: case-12
+expected_findings: []
+human_checks: []
+must_not_report:
+  - id: FP-001
+    any_terms:
+      - [age, 年齢, MIN_AGE]
+      - [boundary, 境界, 18]
+notes:
+  - 論理的に等価な境界判定への変更。問題として指摘しないことを確認する。
