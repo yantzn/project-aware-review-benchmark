@@ -1,25 +1,49 @@
 cases:
   - id: case-01
+    branch: case-01
+    pull_request: 1
     title: 正常なリファクタリング
   - id: case-02
+    branch: case-02
+    pull_request: 2
     title: 実装ロジックの不具合
   - id: case-03
+    branch: case-03
+    pull_request: 3
     title: 境界値の不具合
   - id: case-04
+    branch: case-04
+    pull_request: 4
     title: 要件との不一致
   - id: case-05
+    branch: case-05
+    pull_request: 5
     title: API設計書との不一致
   - id: case-06
+    branch: case-06
+    pull_request: 6
     title: DB・項目設計との不一致
   - id: case-07
+    branch: case-07
+    pull_request: 7
     title: プロジェクト固有ルール違反
   - id: case-08
+    branch: case-08
+    pull_request: 8
     title: テスト不足
   - id: case-09
+    branch: case-09
+    pull_request: 9
     title: セキュリティ・秘密情報
   - id: case-10
+    branch: case-10
+    pull_request: 10
     title: 要件と設計書の矛盾
   - id: case-11
+    branch: case-11
+    pull_request: 11
     title: 設計書の更新遅延が疑われるケース
   - id: case-12
+    branch: case-12
+    pull_request: 12
     title: 一見怪しいが正しい実装
