@@ -10,12 +10,16 @@ MAX_AGE = 120
 MAX_NAME_LENGTH = 50
 
 
+def _normalize_email(email: str) -> str:
+    return email.strip().lower()
+
+
 class UserService:
     def __init__(self, repository: UserRepository) -> None:
         self._repository = repository
 
     def register_user(self, *, email: str, name: str, age: int) -> User:
-        normalized_email = email.strip().lower()
+        normalized_email = _normalize_email(email)
         normalized_name = name.strip()
 
         if not normalized_email:
