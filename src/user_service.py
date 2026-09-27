@@ -15,7 +15,7 @@ class UserService:
         self._repository = repository
 
     def register_user(self, *, email: str, name: str, age: int) -> User:
-        normalized_email = email.strip().lower()
+        normalized_email = email.strip()
         normalized_name = name.strip()
 
         if not normalized_email:
