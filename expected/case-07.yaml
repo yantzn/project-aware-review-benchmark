@@ -1,0 +1,10 @@
+case_id: case-07
+expected_findings:
+  - id: RULE-001
+    category: project_rules
+    file: src/api.py
+    any_terms:
+      - [Repository, repository]
+    project_rule_reference_terms: [PRJ-ARCH-001]
+human_checks: []
+must_not_report: []
