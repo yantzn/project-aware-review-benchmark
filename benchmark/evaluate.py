@@ -133,12 +133,24 @@ def score(actual: dict, gold: dict) -> dict:
     precision = true_positive / len(findings) if findings else (1.0 if expected_total == 0 else 0.0)
     recall = true_positive / expected_total if expected_total else 1.0
 
+    evidence_ok = sum(
+        1
+        for actual_finding, expected in matched_pairs
+        if (
+            reference_ok(actual_finding, expected.get("evidence_terms", []))
+            if expected.get("evidence_terms")
+            else bool(actual_finding.get("evidence") or actual_finding.get("rationale"))
+        )
+    )
+    evidence_accuracy = evidence_ok / len(matched_pairs) if matched_pairs else (1.0 if not expected_findings else 0.0)
+
     result = {
         "正検出数": true_positive,
         "見逃し数": missed,
         "誤検出数": false_positive,
         "適合率": round(precision, 4),
         "再現率": round(recall, 4),
+        "根拠整合率": round(evidence_accuracy, 4),
         "人間確認振り分け精度": (
             round(human_matched / len(expected_human), 4) if expected_human else 1.0
         ),
@@ -147,6 +159,7 @@ def score(actual: dict, gold: dict) -> dict:
         "正しい指摘の誤棄却数": correct_finding_wrongly_excluded,
         "反証後の誤検出率": round(false_positive / len(findings), 4) if findings else 0.0,
         "禁止指摘の残存数": prohibited_reported,
+        "意見相違検出数": len(actual.get("conflicts", [])),
     }
 
     if design_targets:
@@ -172,7 +185,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--case", required=True)
     parser.add_argument("--result", required=True, type=Path)
-    parser.add_argument("--gold-ref", default="benchmark-gold")
+    parser.add_argument("--gold-ref", default="origin/benchmark-gold")
     args = parser.parse_args()
 
     actual = json.loads(args.result.read_text(encoding="utf-8"))
