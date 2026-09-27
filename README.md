@@ -85,3 +85,8 @@ Python 3.11以上を想定しています。
 python -m pip install -e .[dev]
 python -m pytest
 ```
+
+
+## 実行手順
+
+詳細な実行・採点手順は `benchmark/runbook.md` を参照してください。
