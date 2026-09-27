@@ -1,0 +1,10 @@
+documents:
+  - file: design/system-design.xlsx
+    type: Excel
+    sheets:
+      - API仕様
+      - 項目定義
+      - DB定義
+    notes:
+      - API-IDや項目IDを優先して関連付ける
+      - 結合セル・非表示セル等の抽出漏れはmissing_contextとして扱う
