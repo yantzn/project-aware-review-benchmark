@@ -1,0 +1,30 @@
+{
+  "case_id": "case-XX",
+  "review_method": "project-aware-with-challenge",
+  "findings": [
+    {
+      "category": "correctness",
+      "severity": "Major",
+      "file": "src/example.py",
+      "message": "指摘内容",
+      "evidence": ["参照したコード・要件・設計・ルール"]
+    }
+  ],
+  "human_checks": [
+    {
+      "message": "人間確認へ送った内容",
+      "evidence": ["矛盾している根拠"]
+    }
+  ],
+  "excluded_findings": [
+    {
+      "message": "反証後に除外した元指摘",
+      "reason": "除外理由"
+    }
+  ],
+  "review_coverage": {
+    "reviewed": [],
+    "not_reviewed": [],
+    "missing_context": []
+  }
+}
