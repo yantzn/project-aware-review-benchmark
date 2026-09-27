@@ -1,0 +1,10 @@
+case_id: case-04
+expected_findings:
+  - id: REQ-001
+    category: requirements
+    file: src/user_service.py
+    any_terms:
+      - [email, メール]
+      - [lower, lowercase, 小文字, 正規化]
+human_checks: []
+must_not_report: []
