@@ -1,0 +1,6 @@
+case_id: case-01
+expected_findings: []
+human_checks: []
+must_not_report: []
+notes:
+  - 振る舞いを変えないリファクタリング。問題指摘を増やさないことを確認する。
