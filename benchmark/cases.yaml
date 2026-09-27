@@ -1,0 +1,25 @@
+cases:
+  - id: case-01
+    title: 正常なリファクタリング
+  - id: case-02
+    title: 実装ロジックの不具合
+  - id: case-03
+    title: 境界値の不具合
+  - id: case-04
+    title: 要件との不一致
+  - id: case-05
+    title: API設計書との不一致
+  - id: case-06
+    title: DB・項目設計との不一致
+  - id: case-07
+    title: プロジェクト固有ルール違反
+  - id: case-08
+    title: テスト不足
+  - id: case-09
+    title: セキュリティ・秘密情報
+  - id: case-10
+    title: 要件と設計書の矛盾
+  - id: case-11
+    title: 設計書の更新遅延が疑われるケース
+  - id: case-12
+    title: 一見怪しいが正しい実装
