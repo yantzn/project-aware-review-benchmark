@@ -1,0 +1,12 @@
+case_id: case-10
+expected_findings: []
+human_checks:
+  - id: HUMAN-001
+    any_terms:
+      - ["400"]
+      - ["409"]
+      - [要件, requirement]
+      - [設計, design]
+must_not_report: []
+notes:
+  - 要件とExcel設計書が矛盾するため、コード不具合として断定せず人間確認へ回す。
