@@ -1,0 +1,9 @@
+case_id: case-08
+expected_findings:
+  - id: TEST-001
+    category: testing
+    file: src/user_service.py
+    any_terms:
+      - [registered_user_count, 登録ユーザー数, count]
+human_checks: []
+must_not_report: []
