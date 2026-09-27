@@ -7,13 +7,17 @@
       "severity": "Major",
       "file": "src/example.py",
       "message": "指摘内容",
-      "evidence": ["参照したコード・要件・設計・ルール"]
+      "evidence": [
+        "参照したコード・要件・設計・ルール"
+      ]
     }
   ],
   "human_checks": [
     {
       "message": "人間確認へ送った内容",
-      "evidence": ["矛盾している根拠"]
+      "evidence": [
+        "矛盾している根拠"
+      ]
     }
   ],
   "excluded_findings": [
@@ -26,5 +30,10 @@
     "reviewed": [],
     "not_reviewed": [],
     "missing_context": []
-  }
+  },
+  "conflicts": [
+    {
+      "message": "レビュー担当間の意見相違"
+    }
+  ]
 }
