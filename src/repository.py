@@ -11,7 +11,7 @@ class UserRepository:
         return any(user.email == email for user in self._users)
 
     def save(self, *, email: str, name: str, age: int) -> User:
-        user = User(id=len(self._users) + 1, email=email, name=name, age=age)
+        user = User(id=len(self._users) + 1, email=email, name=name, age=str(age))
         self._users.append(user)
         return user
 
