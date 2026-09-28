@@ -11,7 +11,7 @@
 ## REQ-003 重複メール
 
 同一メールアドレスは重複登録できない。
-APIは重複時にHTTP **409** とエラーコード `DUPLICATE_EMAIL` を返す。
+APIは重複時にHTTP **400** とエラーコード `DUPLICATE_EMAIL` を返す。
 
 ## REQ-004 名前
 
