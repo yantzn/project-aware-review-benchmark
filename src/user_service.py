@@ -24,7 +24,7 @@ class UserService:
             raise ValidationError("name is required")
         if len(normalized_name) > MAX_NAME_LENGTH:
             raise ValidationError("name is too long")
-        if age < MIN_AGE or age > MAX_AGE:
+        if age <= MIN_AGE or age > MAX_AGE:
             raise ValidationError("age is out of range")
         if self._repository.exists_by_email(normalized_email):
             raise DuplicateEmailError(normalized_email)
