@@ -3,7 +3,12 @@ from __future__ import annotations
 from typing import Any
 
 from .exceptions import DuplicateEmailError, ValidationError
+from .repository import UserRepository
 from .user_service import UserService
+
+
+def list_users(repository: UserRepository) -> tuple[int, dict[str, Any]]:
+    return 200, {"users": [user.email for user in repository.all()]}
 
 
 def create_user(service: UserService, payload: dict[str, Any]) -> tuple[int, dict[str, Any]]:
