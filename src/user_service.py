@@ -14,6 +14,9 @@ class UserService:
     def __init__(self, repository: UserRepository) -> None:
         self._repository = repository
 
+    def registered_user_count(self) -> int:
+        return len(self._repository.all())
+
     def register_user(self, *, email: str, name: str, age: int) -> User:
         normalized_email = email.strip().lower()
         normalized_name = name.strip()
