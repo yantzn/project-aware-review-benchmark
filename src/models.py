@@ -8,4 +8,4 @@ class User:
     id: int
     email: str
     name: str
-    age: int
+    age: str
