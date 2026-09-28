@@ -6,6 +6,9 @@ from .exceptions import DuplicateEmailError, ValidationError
 from .user_service import UserService
 
 
+CREATE_USER_PATH = "/v2/users"
+
+
 def create_user(service: UserService, payload: dict[str, Any]) -> tuple[int, dict[str, Any]]:
     try:
         user = service.register_user(
